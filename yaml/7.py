@@ -1,43 +1,25 @@
 import json
 
-# Step 1: Read JSON data from a file
-def read_json_file(file_path):
-    with open(file_path, 'r') as file:
-        data = json.load(file)  # Parse the JSON data
-    return data
+# File path
+file_path = "7.json"
 
-# Step 2: Manipulate the JSON data
-def manipulate_data(data):
-    # Example manipulations:
-    # 1. Change a value
-    if "name" in data:
-        data["name"] = "Updated Name"
-    
-    # 2. Add a new field
-    data["Favorite color"] = "Green"
-    
-    # 3. Delete a field
-    if "age" in data:
-        del data["age"]
-    
-    return data
+# Step 1: Read JSON data from the file
+with open(file_path, 'r') as file:
+    data = json.load(file)  # Load JSON into a Python dictionary
 
-# Step 3: Write JSON data back to the file
-def write_json_file(file_path, data):
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=4)  # Write JSON with pretty formatting
+# Step 2: Modify the data
+# Change the value of "name" if it exists
+data["name"] = "Stasys"
 
-# Main Program
-if __name__ == "__main__":
-    file_path = "7.json"  # Path to your JSON file
-    
-    # Read the JSON file
-    json_data = read_json_file(file_path)
-    
-    # Manipulate the data
-    modified_data = manipulate_data(json_data)
-    
-    # Write the modified data back to the file
-    write_json_file(file_path, modified_data)
-    
-    print(f"JSON data updated successfully in {file_path}.")
+# Add a new field "new_field"
+data["Favorite color"] = "Green"
+
+# Delete the "age" field if it exists
+if "age" in data:
+    del data["age"]
+
+# Step 3: Write the updated data back to the file
+with open(file_path, 'w') as file:
+    json.dump(data, file, indent=4)  # Save the data back to the file with pretty formatting
+
+print(f"JSON data updated successfully in {file_path}.")
