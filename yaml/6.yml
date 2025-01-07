@@ -5,7 +5,7 @@ subject: &subject
     - History
 
 Student:
-  - name: Jonas
+  - name: Jonass
     age: 20
     grade: 10
     subjects:
