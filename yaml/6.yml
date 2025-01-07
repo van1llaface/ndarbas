@@ -1,0 +1,13 @@
+subject: &subject
+  subjects:
+    - Math
+    - Science
+    - History
+
+Student:
+  - name: Jonas
+    age: 20
+    grade: 10
+    subjects:
+      <<: *subject
+    ifSubjects: true

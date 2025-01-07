@@ -1,0 +1,10 @@
+{
+    "name": "Updated Name",
+    "grade": "10",
+    "subjects": [
+        "Math",
+        "Science",
+        "History"
+    ],
+    "Favorite color": "Green"
+}
