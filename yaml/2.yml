@@ -1,0 +1,8 @@
+Student:
+  - name: Jonas
+    age: 20
+    grade: 10
+    subjects:
+      - Math
+      - Science
+      - History
