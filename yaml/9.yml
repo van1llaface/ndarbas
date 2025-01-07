@@ -1,0 +1,12 @@
+skills: &skills
+  skills:
+    - Communication
+    - Problem Solving
+
+Employees:
+  - name: John
+    lastname: Doe
+    <<: *skills
+  - name: Anna
+    lastname: Smith
+    <<: *skills
